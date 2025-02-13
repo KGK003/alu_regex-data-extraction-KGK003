@@ -1,5 +1,5 @@
 
-const { extractData } = require("./regexpatterns");
+const { extractData } = require("./regexPatterns.js");
 
 
 const sampleText = `
