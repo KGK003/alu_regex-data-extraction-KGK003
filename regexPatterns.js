@@ -22,4 +22,4 @@ function extractData(text) {
   };
 
 }
-module.exports = { extractData };
+module.exports = { regexPatterns,extractData };
