@@ -21,6 +21,9 @@ const sampleText = `
   The item costs $1,234.56.
 
 `;
-
-
-console.log("Extracted Data:", extractData(sampleText))
+const extractedData = extractData( sampleText); 
+ console.log("\n===== Extracted Data =====\n"); 
+Object.keys(extractedData).forEach((key) => {
+  console.log(`${key.toUpperCase()}:`);
+  console.log(extractedData[key].length ? extractedData[key].join("\n") : "No matches found");
+  console.log("\n-------------------------\n"); });
