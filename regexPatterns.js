@@ -5,4 +5,21 @@ const regexPatterns = {
     hashtag: /#\w+/,
     phone: /(?:\+?\d{1,3})?[-. (]?\(?\d{1,4}?\)?[-. ]?\d{1,4}[-. ]?\d{1,9}/,
 };
-export default regexPatterns;
+function extractData(text) {
+
+  return {
+
+    emails: text.match(regexPatterns.email) || [],
+
+    urls: text.match(regexPatterns.url) || [],
+
+    phoneNumbers: text.match(regexPatterns.phone) || [],
+      
+    htmlTags: text.match(regexPatterns.htmlTag) || [],
+
+    hashtags: text.match(regexPatterns.hashtag) || [],
+
+  };
+
+}
+module.exports = { extractData };
